@@ -1,11 +1,60 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Faltam 6 horas para ir embora!"
+
+        android:id="@+id/txtPreview" />
+
+    <!-- basic button -->
+    <com.beardedhen.androidbootstrap.BootstrapButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:text="Começar trabalho."
+    android:layout_below="@+id/txtPreview"
+    bootstrap:bb_icon_right="fa-clock-o"
+    bootstrap:bb_type="default"
+    android:id="@+id/btn_startWork"
+    />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Parar Trabalho"
+        android:layout_below="@+id/btn_startWork"
+        bootstrap:bb_icon_right="fa-clock-o"
+        bootstrap:bb_type="default"
+        android:id="@+id/btn_stoptWork"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Preview"
+        android:layout_below="@+id/btn_stoptWork"
+        bootstrap:bb_type="info"
+        android:id="@+id/btn_preview"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Reset"
+        android:layout_below="@+id/btn_preview"
+        bootstrap:bb_type="primary"
+        android:id="@+id/btn_reset"
+        />
 
 </RelativeLayout>
